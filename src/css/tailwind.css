@@ -1,0 +1,46 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+input[type="range"]::-moz-range-thumb,
+input[type="range"]::-webkit-slider-thumb {
+    @apply bg-amber-900 text-amber-500;
+}
+
+input[type="radio"]:checked + label {
+    @apply bg-gray-800 text-white
+}
+
+@layer base {
+    html, body, #app {
+        @apply h-full w-full
+    }
+
+    strong {
+        @apply font-bold;
+    }
+
+    table, thead, tbody {
+        @apply w-full;
+    }
+
+    tr {
+        @apply w-full border border-black;
+    }
+
+    th, td {
+        @apply border-x border-black
+    }
+
+    textarea {
+        @apply m-auto text-lg p-2 leading-10;
+        background-image: linear-gradient(#000 1px, transparent 1px);
+        background-size: 100% 40px;
+    }
+}
+@layer components {
+
+    /*&::-moz-range-track*/
+    /*&::-moz-range-progress*/
+    /*&::-webkit-slider-runnable-track*/
+}
